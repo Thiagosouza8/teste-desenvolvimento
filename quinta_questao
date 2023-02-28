@@ -1,0 +1,23 @@
+public class InverteString {
+    
+    public static void main(String[] args) {
+        
+        
+        String str = "exemplo";
+        System.out.println("String original: " + str);
+        
+     
+        char[] caracteres = str.toCharArray();
+        int tamanho = caracteres.length;
+        for (int i = 0; i < tamanho / 2; i++) {
+            char temp = caracteres[i];
+            caracteres[i] = caracteres[tamanho - 1 - i];
+            caracteres[tamanho - 1 - i] = temp;
+        }
+        String strInvertida = new String(caracteres);
+        
+       
+        System.out.println("String invertida: " + strInvertida);
+        
+    }
+}
